@@ -30,4 +30,4 @@ RUN \
   sbt sbtVersion
 
 # Define working directory
-WORKDIR /root
+WORKDIR /work
