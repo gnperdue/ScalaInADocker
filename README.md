@@ -69,4 +69,19 @@ java8_scala2.11$ docker build -t gnperdue/scaladock:latest .
 java8_scala2.11$ docker push gnperdue/scaladock:latest
 ```
 
+Workflow example:
 
+```
+docker-machine start scaladock
+eval "$(docker-machine env scaladock)"
+docker pull gnperdue/scaladock
+docker run -v $PWD:/work -it --rm gnperdue/scaladock
+
+root@5c13f2977db1:~# cd /work/
+root@5c13f2977db1:/work# scala
+Welcome to Scala version 2.11.7 (OpenJDK 64-Bit Server VM, Java 1.8.0_121).
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala>
+```
